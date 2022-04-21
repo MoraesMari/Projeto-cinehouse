@@ -23,7 +23,7 @@ const catalogo = [
 
 catalogo.push(filme)
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 const filmeQueVouAdicionar = {
   codigo: 3,
   titulo: "Jumanji",
@@ -33,12 +33,12 @@ const filmeQueVouAdicionar = {
   emCartaz: false
 }
 adicionarFilme(filmeQueVouAdicionar)
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 function buscarFilme(identificador) {
   const filme = catalogo.find((filme) => filme.codigo === identificador)
   return filme
 }
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 function buscarFilme (codigo){
   let filmeEncontrado
 
@@ -49,7 +49,7 @@ function buscarFilme (codigo){
   }
   return filmeEncontrado
 }
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 function alterarEmCartaz(codigo, callback){  
   const filmeEncontrado = callback(codigo)
   filmeEncontrado.emCartaz = !filmeEncontrado.emCartaz
@@ -57,14 +57,14 @@ function alterarEmCartaz(codigo, callback){
 }
 
 alterarEmCartaz(1, buscarFilme)
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 function listarTodosOsFilmes(){
   for(let index=0; index < catalogo.length; index++)
   console.log(catalogo[index])
 }
 
 listarTodosOsFilmes();
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 function listarFilmesEmCartaz(){
   for(let index = 0; index <catalogo.lenght; index++){
     if (!catalogo[index].emCartaz) {
@@ -73,7 +73,7 @@ function listarFilmesEmCartaz(){
 }
 return filmesEmCartaz 
 }
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 function adicionarFilme(filme) {
   catalogo.push(filme)
 }
